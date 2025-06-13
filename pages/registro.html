@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='registro.css') }}">
+    <title>Cadastro</title>
+</head>
+<body>
+    <form>
+        <div id="formBox">
+            <label for="nome">Nome:</label>
+            <input name="nome" class="inputs" type="text" placeholder="nome">
+            <label for="email">Email:</label>
+            <input name="email" class="inputs" type="email" placeholder="email">
+            <label for="senha">Senha:</label>
+            <input name="senha" class="inputs" type="password" placeholder="senha">
+            <button>Enviar</button>
+        </div>
+    </form>
+</body>
+</html>
