@@ -1,13 +1,9 @@
 from flask import Flask, jsonify, render_template, request, flash, redirect, url_for
-import firebase_admin
-from firebase_admin import credentials, firestore
+
 
 app = Flask(__name__, template_folder = 'pages')
-app_options = {'projectId': 'n3---seguranca'}
-default_app = firebase_admin.initialize_app(options=app_options)
 
-
-@app.route("/cadastro", methods=['GET', 'POST'])
+@app.route("/", methods=['GET', 'POST'])
 def cadastrar():
     if request.method == "POST":
         info = [request.form.get['nome'], request.form.get['email'], request.form.get['email']]
