@@ -11,9 +11,10 @@ services:
 # creating environment variables:
     environment: 
       - KEYCLOAK_ADMIN=admin
-      - KeyCLOAK_PASSWORD=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
     networks:
       - guess
+    command: start-dev
 
 # the name of the container
   guess-app:  
@@ -28,13 +29,12 @@ services:
       - guess
 # expose the container to port 5000
     ports:
-      - 5000:5000
+      - 8000:8000
 # the keycloak service will wait till the guess-app will run
     depends_on:
       - keycloak
     environment:
      - KEYCLOAK_URL=http://kkc.sh buildeycloak:8080
-
 #build the internal docker network
 networks:
   guess:

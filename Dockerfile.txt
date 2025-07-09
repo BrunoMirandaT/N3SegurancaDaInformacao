@@ -2,7 +2,7 @@
 FROM python:3.9-alpine3.15
 
 # Creat and enter to this folder:
-WORKDIR /app
+WORKDIR /
 
 # copy the reqiurements file to the container
 COPY ./requirements.txt .
